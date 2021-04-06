@@ -4,10 +4,11 @@ const colors = {
   black: '#212529',
   gray: '#adb5bd',
   white: '#f8f9fa',
-  violet: '##a61e4d',
+  violet: '#a61e4d',
   pink: '#e64980',
   red: '#e03131',
   green: '#40c057',
+  blue: '#339af0',
 };
 
 const fontSizes = {
