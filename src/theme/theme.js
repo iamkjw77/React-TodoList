@@ -6,6 +6,8 @@ const colors = {
   white: '#f8f9fa',
   violet: '##a61e4d',
   pink: '#e64980',
+  red: '#e03131',
+  green: '#40c057',
 };
 
 const fontSizes = {
