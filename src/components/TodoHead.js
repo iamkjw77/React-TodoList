@@ -1,3 +1,4 @@
+import { useTodoState } from 'contexts/todo';
 import styled from 'styled-components';
 
 const TodoHeadBlock = styled.div`
@@ -27,13 +28,28 @@ const TodoHeadBlock = styled.div`
 `;
 
 function TodoHead() {
+  const today = new Date();
+  const day = today.getDay();
+  const week = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ];
+
+  const todos = useTodoState();
+  const leftTodos = todos.filter((todo) => !todo.completed);
+
   return (
     <TodoHeadBlock>
       <time>
-        2021년 4월 6일
-        <span className="day">화요일</span>
+        {today.toString().slice(4, 15)}
+        <span className="day">{week[day]}</span>
       </time>
-      <ul className="tasks-left">할 일 2개 남음</ul>
+      <div className="tasks-left">To do left: {leftTodos.length}</div>
     </TodoHeadBlock>
   );
 }
