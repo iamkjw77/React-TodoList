@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.2",
@@ -20,7 +21,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve": "serve -s build",
-    "build-and-serve": "npm run build && npm run serve"
+    "build-and-serve": "npm run build && npm run serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -65,5 +68,6 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "sass": "^1.32.8",
     "serve": "^11.3.2"
-  }
+  },
+  "homepage": "https://iamkjw77.github.io/React-TodoList/."
 }
